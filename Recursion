@@ -1,0 +1,83 @@
+#Binary equivalent of a number using recursion
+
+def binary(n):
+    l=[]
+    while n!=0:
+        rem=n%2
+        l.append(rem)
+        n=n//2
+    x=len(l)
+    for i in range(x-1,-1,-1):
+        print(l[i],end="")
+    
+n=int(input())
+binary(n)
+
+#Fibonacci Series
+
+def fib(n):
+    a=-1
+    b=1
+    for i in range(1,n+1):
+        x=a+b
+        print(x,end=" ")
+        a=b
+        b=x
+n=int(input())
+fib(n)
+
+#Odd or Even
+
+def num(n):
+    if n%2==0:
+        print("Even!")
+    else:
+        print("Odd!")
+n=int(input())
+num(n)
+
+#Factorial
+
+def fact(n):
+    fact=1
+    if n>0:
+        while n!=1:
+            fact=fact*n
+            n=n-1
+        print(fact)
+    else:
+        print(fact)    
+n=int(input())
+fact(n)
+
+#LCM of two numbers
+
+def lcm(n1,n2):
+    if n1>n2:
+        num=n1
+    else:
+        num=n2
+    val=num
+    while True:
+        if num%n1==0 and num%n2==0:
+            print(num)
+            break
+        num=num+val
+    
+n1=int(input())
+n2=int(input())
+lcm(n1,n2)
+
+#Decimal to Binary
+
+def bin(n):
+    l=[]
+    while n!=1:
+        rem=n%2
+        l.append(rem)
+        n=n//2
+    l.append(n)
+    for i in l[::-1]:
+        print(i,end="")
+n=int(input())
+bin(n)
