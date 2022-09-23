@@ -1,0 +1,85 @@
+#Upper Case and Lower Case
+
+n=input()
+lc=0
+uc=0
+for i in n:
+    if i>='A' and i<='Z':
+        uc+=1
+    else:
+        lc+=1
+print(uc)
+print(lc)
+        
+#Count the word and Character
+
+n=input()#hi how
+l=n.split(" ")
+word=0
+for i in l:#hi
+    word+=1#1
+print(word)
+char=len(n)
+print(char)
+
+#Number of Digits and Letters in a String
+
+n=input()
+count=0
+d=0
+for i in n:
+    if (i>='a' and i<='z') or (i>='A' and i<='Z'):
+        count+=1
+    else:
+        d+=1
+print("Characters =",count)
+print("Digits =",d)
+
+#Characters in Ascending order
+
+str = input()
+result = ''.join(sorted(str))
+print(result)
+
+#Form a new string made
+
+n=input()
+l=n.split()
+x=len(l)
+y=""
+for i in l:
+    if i==l[0]: 
+        z=i
+        y=y+z[:2]
+    if i==l[x-1]:
+        z=i
+        y=y+z[-2:]
+print(y)
+
+#Remove the nth index
+
+n=input()
+x=int(input())
+print(n[:x]+n[x+1:])
+
+#Replace all occurrences
+
+n=input()
+x=input()
+s=input()
+l=[]
+for i in n:
+    l.append(i)
+for i in range(0,len(l)):
+    if l[i]==x:
+        l[i]=s
+print("Modified string:")
+for i in l:
+    print(i,end="")
+
+#Remove the nth index character
+
+n=input()
+x=int(input())
+print(n[:x]+n[x+1:])
+
